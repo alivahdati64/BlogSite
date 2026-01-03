@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="login__form">
+        <div class="login__form__img">
+            <img src="{% static 'img/login.avif' %}" alt="" title="" />
+          
+        </div>
+        <div class="login__form__right">
+          <h1>Sign Up</h1>
+          <form action="{% url 'accounts:signup' %}" method="post">
+            {% csrf_token %}
+            <!-- {{form.as_p}} -->
+            <!-- {{form.username}} -->
+            <label for="input-email">Enter Username</label>
+            <input type="text" name="username" />
+            <label for="input-pass">Enter Password</label>
+            <input type="password" name="password1" />
+            <label for="input-pass">Confirm Password</label>
+            <input type="password" name="password2" />
+            
+            <button type="submit" class="login-btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

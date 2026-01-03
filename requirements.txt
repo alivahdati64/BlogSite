@@ -1,0 +1,17 @@
+Django>3.2,<3.3
+asgiref==3.8.1
+Django==3.2.4
+pytz==2025.2
+sqlparse==0.5.5
+typing-extensions==4.13.2
+Pillow==8.3.1
+django-extensions==3.1.5
+django-robots==5.0
+django-debug-toolbar==3.2.4
+django-taggit==1.5.1
+django-summernote==0.8.20.0
+django-simple-captcha==0.5.14
+django-multi-captcha-admin==2.0.0
+
+
+

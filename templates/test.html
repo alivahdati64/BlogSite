@@ -1,0 +1,47 @@
+
+{% load blog_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  -->
+    <h1></h1>
+    <h1>
+        {% hello %}
+    </h1>
+     <h1>
+        {% function1 2 %}
+    </h1>
+    <h1>
+        {% totalposts as tp %}
+    </h1>
+    <h1>
+        {{tp}}
+    </h1>
+    {% posts as p %}
+    {% for post in p %}
+    <p> {{post.content | snippet:50}}</p>
+   
+    {% endfor %}
+
+
+    {% popularposts %}
+
+
+    <!-- {{posts}}
+    {% for post in posts %}
+    {% if post.status == 0 %}
+    <p>Not Published Yet</p>
+    {% else %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+    {% endif %}
+    {% endfor %} -->
+    
+</body>
+</html>
